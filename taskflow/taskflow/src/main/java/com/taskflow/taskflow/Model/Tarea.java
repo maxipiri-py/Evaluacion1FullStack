@@ -12,11 +12,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 
 public class Tarea {
-
+ 
     @NotNull(message = "El ID no puede ser nulo")
     private long id;
 

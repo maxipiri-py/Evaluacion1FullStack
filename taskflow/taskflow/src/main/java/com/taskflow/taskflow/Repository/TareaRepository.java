@@ -11,7 +11,7 @@ import com.taskflow.taskflow.Model.Tarea;
 @Repository
 public class TareaRepository {
     
-private List<Tarea> tareas = new Arraylist<>();
+private List<Tarea> tareas = new ArrayList<>();
 
     public Tarea guardar(Tarea tarea){
         tareas.add(tarea);

@@ -17,18 +17,18 @@ import com.taskflow.taskflow.Model.Tarea;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/tareas")
+@RequestMapping("/api/tareas")
 public class TareaController {
   @Autowired
     private TareaController service;
 
     @GetMapping
     public List<Tarea> listar(){
-        return service.listarTodas();
+        return service.listar();
     }
     @PostMapping
     public ResponseEntity<Tarea> crear(@Valid @RequestBody Tarea tarea){
-        return ResponseEntity.status(201).body(service.crearTarea(tarea));
+        return ResponseEntity.status(201).body(service.crear(tarea));
     }
     @GetMapping("/{id}")
     public ResponseEntity<Tarea> ovtener(@PathVariable Long id){
